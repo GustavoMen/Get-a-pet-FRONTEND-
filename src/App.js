@@ -26,7 +26,7 @@ function App() {
              <Register />
             </Route>
 
-            <Route path="/" exact>
+            <Route exact path="/">
               <Home />
             </Route>
 
