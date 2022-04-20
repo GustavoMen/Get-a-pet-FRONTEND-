@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 /* Components */
 import Navbar from './components/layout/Navbar' 
@@ -16,21 +16,15 @@ function App() {
     <Router>
      <Navbar /> 
      <Container>
-          <Switch>
+          <Routes>
 
-            <Route path="/login">
-              <Login />
-            </Route>
+            <Route path="/login" element={<Login />} />
+              
+            <Route path="/register" element={<Register />} />
 
-            <Route path="/register">
-             <Register />
-            </Route>
+            <Route exact path="/" element={<Home />} />
 
-            <Route exact path="/">
-              <Home />
-            </Route>
-
-          </Switch>
+          </Routes>
         </Container>
       <Footer />
     </Router>
