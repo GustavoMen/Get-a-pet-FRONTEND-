@@ -17,15 +17,15 @@ function MyPets() {
 
   useEffect(() => {
     api
-    .get('/pets/mypets', {
-      headers: {
-        Authorization: `Bearer ${JSON.parse(token)}`,
-      },
-    })
-    .then((response) => {
-      setPets(response.data.pets)
-    })
-}, [token])
+      .get('/pets/mypets', {
+        headers: {
+          Authorization: `Bearer ${JSON.parse(token)}`,
+        },
+      })
+      .then((response) => {
+        setPets(response.data)
+      })
+  }, [token])
 
   async function removePet(id) {
     let msgType = 'success'

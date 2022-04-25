@@ -10,8 +10,8 @@ function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbar_logo}>
-        <img src={Logo} alt="Get a Pet" />
+      <div className={styles.navbar_logo}>        
+        <img src={Logo} alt="Get a Pet" />       
         <h2>Get a Pet</h2>
       </div>
       <ul>
@@ -20,6 +20,10 @@ function Navbar() {
         </li>
         {authenticated ? (
           <>
+            <li>
+              <Link to="/pet/myadoptions">Minhas Adoções</Link>
+            </li>
+
             <li>
               <Link to="/pet/mypets">Meus Pets</Link>
             </li>
