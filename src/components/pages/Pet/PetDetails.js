@@ -10,21 +10,24 @@ function PetDetails () {
     const {id} = useParams()
     const {setFlashMessage} = useFlashMessage()
     const [token] = useState(localStorage.getItem('token') || '')
+    
 
     useEffect(() => {
         api.get(`/pets/${id}`).then((response) => {
             setPet(response.data.pet)
         })
     }, [id])
+    
 
     async function schedule() {
         let msgType = 'success'
+        
     
         const data = await api
-          .patch(`pets/schedule/${pet._id}`, {
+          .patch(`pets/schedule/${id}`, {
             headers: {
-              Authorization: `Bearer ${JSON.parse(token)}`,
-            },
+                Authorization: `Bearer ${JSON.parse(token)}`
+            }
           })
           .then((response) => {
             console.log(response.data)
