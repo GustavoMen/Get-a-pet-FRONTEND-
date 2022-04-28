@@ -1,5 +1,5 @@
-<img src="./public/readmeGithub/User1.gif" alt="exemplo imagem">
-<img src="./public/readmeGithub/User2.gif" alt="exemplo imagem">
+<img src="./src/assets/readmeGithub/User1.gif" alt="exemplo imagem">
+<img src="./src/assets/readmeGithub/User2.gif" alt="exemplo imagem">
 
 # Get a Pet
 
